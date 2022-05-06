@@ -24,7 +24,7 @@ LinkedList.prototype.addToHead = function(value) {
 };
 
 LinkedList.prototype.addToTail = function(value) {
-  let newNode = new Node(value, null, this.tail)
+  let newNode = new Node(value, null, this.tail);
 
   if (this.tail) {
     this.tail.next = newNode;
@@ -36,9 +36,10 @@ LinkedList.prototype.addToTail = function(value) {
 }
 
 let myLinkedList = new LinkedList()
-myLinkedList.addToTail(100)
+myLinkedList.addToTail(10)
+myLinkedList.addToTail(20)
+myLinkedList.addToTail(30)
+myLinkedList.addToHead(100)
 console.log(myLinkedList)
-myLinkedList.addToTail(200)
-console.log(myLinkedList)
-myLinkedList.addToTail(300)
-console.log(myLinkedList)
+
+console.log(myLinkedList.tail.prev.prev.prev)
