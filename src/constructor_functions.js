@@ -1,4 +1,5 @@
 // Constructor functions
+
 function User(firstName, lastName, age, gender) {
   this.firstName = firstName;
   this.lastName = lastName;
