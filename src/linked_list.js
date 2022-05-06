@@ -11,5 +11,7 @@ function Node(value, next, prev) {
   this.prev = prev;
 }
 
-let node1 = new Node(100, 'node2', null);
-console.log(node1)
+LinkedList.prototype.addToHead = function(value) {
+  let newNode = new Node(value, this.head, null);
+};
+
