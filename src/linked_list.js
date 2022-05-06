@@ -41,7 +41,6 @@ LinkedList.prototype.removeHead = function() {
   }
 
   let val = this.head.value;
-
   this.head = this.head.next;
 
   if (this.head) {
@@ -53,11 +52,28 @@ LinkedList.prototype.removeHead = function() {
   return val;
 }
 
+LinkedList.prototype.removeTail = function() {
+  if (!this.tail) {
+    return null;
+  }
+
+  let val = this.tail.value;
+  this.tail = this.tail.prev;
+
+  if (this.tail) {
+    this.tail.next = null;
+  } else {
+    this.head = null;
+  }
+
+  return val;
+}
+
 let myLinkedList = new LinkedList()
 myLinkedList.addToTail(10)
 myLinkedList.addToTail(20)
 myLinkedList.addToTail(30)
 myLinkedList.addToHead(100)
-console.log(myLinkedList.removeHead());
-console.log(myLinkedList.removeHead());
+console.log(myLinkedList.removeTail());
+console.log(myLinkedList.removeTail());
 console.log(myLinkedList)
