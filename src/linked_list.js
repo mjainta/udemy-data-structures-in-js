@@ -23,10 +23,22 @@ LinkedList.prototype.addToHead = function(value) {
   this.head = newNode;
 };
 
+LinkedList.prototype.addToTail = function(value) {
+  let newNode = new Node(value, null, this.tail)
+
+  if (this.tail) {
+    this.tail.next = newNode;
+  } else {
+    this.head = newNode;
+  }
+
+  this.tail = newNode;
+}
+
 let myLinkedList = new LinkedList()
-myLinkedList.addToHead(100)
+myLinkedList.addToTail(100)
 console.log(myLinkedList)
-myLinkedList.addToHead(200)
+myLinkedList.addToTail(200)
 console.log(myLinkedList)
-myLinkedList.addToHead(300)
+myLinkedList.addToTail(300)
 console.log(myLinkedList)
