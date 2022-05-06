@@ -79,6 +79,8 @@ LinkedList.prototype.search = function(searchValue) {
       currentNode = currentNode.next;
     }
   }
+
+  return null
 }
 
 let myLinkedList = new LinkedList()
@@ -88,3 +90,4 @@ myLinkedList.addToTail(30)
 myLinkedList.addToHead(100)
 
 console.log(myLinkedList.search(10))
+console.log(myLinkedList.search('10'))
