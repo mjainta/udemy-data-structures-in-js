@@ -69,11 +69,22 @@ LinkedList.prototype.removeTail = function() {
   return val;
 }
 
+LinkedList.prototype.search = function(searchValue) {
+  let currentNode = this.head;
+
+  while (currentNode) {
+    if (currentNode.value === searchValue) {
+      return currentNode.value;
+    } else {
+      currentNode = currentNode.next;
+    }
+  }
+}
+
 let myLinkedList = new LinkedList()
 myLinkedList.addToTail(10)
 myLinkedList.addToTail(20)
 myLinkedList.addToTail(30)
 myLinkedList.addToHead(100)
-console.log(myLinkedList.removeTail());
-console.log(myLinkedList.removeTail());
-console.log(myLinkedList)
+
+console.log(myLinkedList.search(10))
