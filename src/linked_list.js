@@ -35,11 +35,29 @@ LinkedList.prototype.addToTail = function(value) {
   this.tail = newNode;
 }
 
+LinkedList.prototype.removeHead = function() {
+  if (!this.head) {
+    return null;
+  }
+
+  let val = this.head.value;
+
+  this.head = this.head.next;
+
+  if (this.head) {
+    this.head.prev = null;
+  } else {
+    this.tail = null;
+  }
+
+  return val;
+}
+
 let myLinkedList = new LinkedList()
 myLinkedList.addToTail(10)
 myLinkedList.addToTail(20)
 myLinkedList.addToTail(30)
 myLinkedList.addToHead(100)
+console.log(myLinkedList.removeHead());
+console.log(myLinkedList.removeHead());
 console.log(myLinkedList)
-
-console.log(myLinkedList.tail.prev.prev.prev)
