@@ -23,10 +23,10 @@ LinkedList.prototype.addToHead = function(value) {
   this.head = newNode;
 };
 
-let myList = new LinkedList()
-myList.addToHead('value 1')
-console.log(myList)
-myList.addToHead('value 2')
-console.log(myList)
-myList.addToHead('value 3')
-console.log(myList)
+let myLinkedList = new LinkedList()
+myLinkedList.addToHead(100)
+console.log(myLinkedList)
+myLinkedList.addToHead(200)
+console.log(myLinkedList)
+myLinkedList.addToHead(300)
+console.log(myLinkedList)
