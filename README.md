@@ -4,7 +4,7 @@ Code done with the Udemy course [learning-data-structures-in-javascript-from-scr
 
 ## Learnings
 
-### 3 The Prototype Object
+### Section 1: The Prototype Object
 
 You can add class functions after defining a constructor method using prototype.
 
@@ -16,7 +16,7 @@ console.log(user1.getEmailAddress())
 console.log(user200.getEmailAddress())
 ```
 
-### 4. What is a Linked List?
+### Section 2: What is a Linked List?
 
 - A list where node reference each others "prev" and "next" item
 - The linked list does only need to know the "head" and "tail" of the list, the nodes references make up the linking in between
@@ -28,3 +28,12 @@ Linked list O notations:
   - Adding/removing tail
 - Linear time complexity - O(n)
   - Searching through Linked Lists
+
+### Section 3: Binary Search Tree (BST)
+
+- A Tree where each node has 0, 1, or 2 subnodes
+  - Each node has a parent node, except the root node
+- We work with numbers only
+  - The lesser number of the parent will be on the left side
+  - The higher number than the parent will be on the right side
+- We will not think of nodes, but think of each node as another Binary Search Tree (BST)
