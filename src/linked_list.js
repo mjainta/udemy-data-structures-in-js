@@ -83,11 +83,34 @@ LinkedList.prototype.search = function(searchValue) {
   return null
 }
 
+LinkedList.prototype.indexOf = function(value) {
+  let currentNode = this.head
+  let currentIndex = 0
+  const indexes = []
+
+  while(currentNode) {
+    if (currentNode.value === value) {
+      indexes.push(currentIndex)
+    }
+    currentNode = currentNode.next
+    currentIndex++
+  }
+
+  return indexes
+}
+
 let myLinkedList = new LinkedList()
 myLinkedList.addToTail(10)
 myLinkedList.addToTail(20)
 myLinkedList.addToTail(30)
+myLinkedList.addToTail(30)
+myLinkedList.addToTail(20)
+myLinkedList.addToTail(30)
 myLinkedList.addToHead(100)
 
-console.log(myLinkedList.search(10))
-console.log(myLinkedList.search('10'))
+// console.log(myLinkedList.search(10))
+// console.log(myLinkedList.search('10'))
+
+console.log(myLinkedList.indexOf(10))
+console.log(myLinkedList.indexOf(20))
+console.log(myLinkedList.indexOf(30))

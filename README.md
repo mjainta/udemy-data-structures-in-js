@@ -20,3 +20,11 @@ console.log(user200.getEmailAddress())
 
 - A list where node reference each others "prev" and "next" item
 - The linked list does only need to know the "head" and "tail" of the list, the nodes references make up the linking in between
+
+Linked list O notations:
+
+- Constant time - O(1) on:
+  - Adding/removing head
+  - Adding/removing tail
+- Linear time complexity - O(n)
+  - Searching through Linked Lists
