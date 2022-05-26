@@ -56,15 +56,5 @@ bst.insert(85)
 bst.insert(105)
 bst.insert(10)
 
-console.log(bst.right.left.left)
-console.log(bst.right.right)
-
-console.log(bst.contains(10))
-console.log(bst.contains(100))
-console.log(bst.contains(50))
-console.log(bst.contains(59))
-console.log(bst.contains(33))
-console.log(bst.contains(4444))
-
 bst.depthFirstTraversal((value) => console.log(value), "in-order")
 bst.depthFirstTraversal((value) => console.log(value), "pre-order")
