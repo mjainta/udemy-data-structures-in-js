@@ -58,3 +58,17 @@ Applications:
 - Key/Value pairs, the value being a "bucket"
 - The key is a result of hashing some identifier, for example a name
   - If hash collisions occur, we store both datasets in a "bucket"
+
+Pros:
+
+- Constant time insertion O(1)
+- Constant time lookup O(1)
+
+Practical uses:
+
+- Email provider storing addresses
+- Users of an application
+
+Cons:
+
+- Data doesn't store references to other pieces of data in the data structure
