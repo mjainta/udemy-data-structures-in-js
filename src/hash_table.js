@@ -20,6 +20,18 @@ HashTable.prototype.hash = function(key) {
     return bucket;
 }
 
+HashTable.prototype.insert = function(key, value) {
+    const index = this.hash(key);
+    if (!this.buckets[index]) this.buckets[index] = new HashNode(key, value);
+    else {
+        let currentNode = this.buckets[index];
+        while (currentNode.next) {
+            currentNode = currentNode.next
+        }
+        currentNode.next = new HashNode(key, value);
+    }
+}
+
 const myHT = new HashTable(30);
 
 console.log(myHT.hash('Becca'));
