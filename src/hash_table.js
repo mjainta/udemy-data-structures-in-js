@@ -44,7 +44,9 @@ const myHT = new HashTable(30);
 myHT.insert('Dean', 'dean@gmail.com');
 myHT.insert('Megan', 'megan@gmail.com');
 myHT.insert('Dane', 'dane@yahoo.com');
-myHT.insert('Dean', 'dean@yahoo.com');
+myHT.insert('Dean', 'deanmachine@gmail.com');
+myHT.insert('Megan', 'megansmith@gmail.com');
+myHT.insert('Dane', 'dane1010@outlook.com');
 
 
 console.log(myHT.buckets);
