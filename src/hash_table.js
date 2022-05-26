@@ -9,6 +9,17 @@ function HashNode(key, value, next) {
     this.next = next || null;
 }
 
+HashTable.prototype.hash = function(key) {
+    let total = 0;
+
+    for (let i = 0; i < key.length; i++) {
+        total += key[i].charCodeAt();
+    }
+
+    const bucket = total % this.numBuckets;
+    return bucket;
+}
+
 const myHT = new HashTable(30);
 
-console.log(myHT);
+console.log(myHT.hash('Becca'));
