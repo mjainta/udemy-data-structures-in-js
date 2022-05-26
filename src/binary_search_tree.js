@@ -43,6 +43,10 @@ BST.prototype.depthFirstTraversal = function(iteratorFunc, order) {
     if (order === "post-order") iteratorFunc(this.value);
 }
 
+BST.prototype.breadthFirstTraversal = function(iteratorFunc) {
+    const queue = []
+}
+
 let bst = new BST(50);
 
 bst.insert(30)
@@ -56,10 +60,3 @@ bst.insert(35)
 bst.insert(85)
 bst.insert(105)
 bst.insert(10)
-
-console.log("in-order")
-bst.depthFirstTraversal((value) => console.log(value), "in-order")
-console.log("pre-order")
-bst.depthFirstTraversal((value) => console.log(value), "pre-order")
-console.log("post-order")
-bst.depthFirstTraversal((value) => console.log(value), "post-order")
