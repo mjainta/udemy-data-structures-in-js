@@ -37,3 +37,15 @@ Linked list O notations:
   - The lesser number of the parent will be on the left side
   - The higher number than the parent will be on the right side
 - We will not think of nodes, but think of each node as another Binary Search Tree (BST)
+
+Binary Search Tree performance:
+
+- Searching values is fast - O(log n)
+- To have performant binary search trees, it is important that the trees are "balanced"
+  - If there are only "left" or "right" child nodes, it has the structure of a linked list
+
+Applications:
+
+- Dictionary
+- Phone book
+- Users
