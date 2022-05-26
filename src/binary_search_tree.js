@@ -44,7 +44,13 @@ BST.prototype.depthFirstTraversal = function(iteratorFunc, order) {
 }
 
 BST.prototype.breadthFirstTraversal = function(iteratorFunc) {
-    const queue = []
+    const queue = [this];
+    while (queue.length) {
+        let treeNode = queue.shift();
+        iteratorFunc(treeNode);
+        if (treeNode.left) queue.push(treeNode.left)
+        if (treeNode.right) queue.push(treeNode.right)
+    }
 }
 
 let bst = new BST(50);
@@ -60,3 +66,5 @@ bst.insert(35)
 bst.insert(85)
 bst.insert(105)
 bst.insert(10)
+
+bst.breadthFirstTraversal((node) => console.log(node.value))
