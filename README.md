@@ -49,3 +49,12 @@ Applications:
 - Dictionary
 - Phone book
 - Users
+
+### Section 4: Hash table
+
+- Very efficient in lookup and insertion
+  - Lookup: O(1)
+  - Insertion: O(1)
+- Key/Value pairs, the value being a "bucket"
+- The key is a result of hashing some identifier, for example a name
+  - If hash collisions occur, we store both datasets in a "bucket"
