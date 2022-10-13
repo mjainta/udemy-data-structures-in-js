@@ -16,8 +16,7 @@ HashTable.prototype.hash = function(key) {
         total += key[i].charCodeAt();
     }
 
-    const bucket = total % this.numBuckets;
-    return bucket;
+    return total % this.numBuckets;
 }
 
 HashTable.prototype.insert = function(key, value) {
